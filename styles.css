@@ -1,1 +1,64 @@
-/*  your css code here. If applicable */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    position: relative;
+}
+
+.progress-container::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	background-color: #e0e0e0;
+	z-index: -1;
+}
+
+.progress {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 4px;
+	background-color: #3498db;
+	z-index: -1;
+	transition: width 0.4s ease;
+}
+
+.circle {
+	width: 30px;
+	height: 30px;
+	background-color: #e0e0e0;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	transtion: background-color 0.4s ease;
+}
+
+.circle.active {
+	background-color: #3498db;
+}
+
+.btn {
+	display: block;
+	
+}
